@@ -1,1 +1,1 @@
-export { default as HomePage } from "@/pages/regles-jeu/ui/HomePage.vue";
+export { default as AccueilPage } from "@/pages/regles-jeu/ui/AccueilPage.vue";

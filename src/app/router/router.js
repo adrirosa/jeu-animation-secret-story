@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomePage from "@/pages/HomePage.vue";
+import { AccueilPage } from "@/pages/regles-jeu";
+import { MiseEnPlacePage } from "@/pages/mise-en-place";
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: HomePage,
+    name: "accueil",
+    component: AccueilPage,
+  },
+  {
+    path: "/mise-en-place",
+    name: "mise-en-place",
+    component: MiseEnPlacePage,
   },
 ];
 
