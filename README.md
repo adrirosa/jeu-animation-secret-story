@@ -1,9 +1,21 @@
-# jeu-animation-secret-story
+# Jeu d'animation "Secret story"
 
 Mise en place et suivi pour le jeu d'animation sur le thème de "Secret story"
 
-# Vue 3 + Vite
+# Prérequis
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+- node (>= 22)
+- npm
+- cloner le projet
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+# Installation
+
+```bash
+npm install
+```
+
+# Lancer le projet 
+
+```bash
+npm run dev
+```
