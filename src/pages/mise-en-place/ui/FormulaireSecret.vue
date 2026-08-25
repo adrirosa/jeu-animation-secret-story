@@ -15,8 +15,10 @@
       required
     ></textarea>
 
-    <label for="faux-secret">Faux secret</label>
-    <input id="faux-secret" v-model="isFauxSecret" type="checkbox" name="faux-secret" />
+    <div>
+      <label for="faux-secret" class="label-inline">Faux secret</label>
+      <input id="faux-secret" v-model="isFauxSecret" type="checkbox" name="faux-secret" />
+    </div>
 
     <button type="submit" :disabled="!isSubmitEnabled">Ajouter le secret</button>
   </form>

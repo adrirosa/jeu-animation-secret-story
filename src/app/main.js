@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
+import "milligram/dist/milligram.css";
 import "@/app/styles/style.css";
 import App from "@/pages/App.vue";
 import router from "@/app/router/router";
