@@ -2,10 +2,10 @@
   <div class="aside-menu">
     <ul>
       <li>
-        <RouterLink to="/">Accueil</RouterLink>
+        <RouterLink to="/" active-class="active" exact-active-class="active">Accueil</RouterLink>
       </li>
       <li>
-        <RouterLink to="/mise-en-place">Mise en place</RouterLink>
+        <RouterLink to="/mise-en-place" active-class="active" exact-active-class="active">Mise en place</RouterLink>
       </li>
     </ul>
   </div>
@@ -16,6 +16,12 @@
   display: flex;
   justify-content: start;
   width: 15vw;
-  background-color: #f4f5f6;
+  padding: 24px 16px;
+  background-color:#FBF6F6;
+}
+
+.active {
+  font-weight: 700;
+  color: #8F3AC2;
 }
 </style>

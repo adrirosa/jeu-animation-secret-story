@@ -21,6 +21,6 @@ import AsideMenu from "@/shared/ui/layout/AsideMenu.vue";
 
 main {
   width: 1126px;
-  margin: 0 auto;
+  margin: 32px;
 }
 </style>
