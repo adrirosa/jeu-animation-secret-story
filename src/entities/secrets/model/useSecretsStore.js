@@ -6,7 +6,7 @@ export const useSecretsStore = defineStore("secrets", {
   }),
   actions: {
     addSecret(secret) {
-      this.secrets.push(secret);
+      this.secrets.push({ ...secret, isFound: false });
     },
   },
 });

@@ -24,11 +24,22 @@
 
 <script setup>
 import FormulaireSecret from "@/features/create-secret";
-import { useSecretsStore } from "@/entities/secrets";
 
+import { useRouter } from "vue-router";
+import { useSecretsStore } from "@/entities/secrets";
+import { useGameStore } from "@/entities/game";
+
+// Stores
+const router = useRouter();
 const secretsStore = useSecretsStore();
+const gameStore = useGameStore();
+
 const secrets = secretsStore.secrets;
+
+// Methodes
 const launchGame = () => {
-  secretsStore.launchGame();
+  gameStore.launchGame();
+
+  router.push({ name: "journal-secrets" });
 };
 </script>

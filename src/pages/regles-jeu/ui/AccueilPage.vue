@@ -31,6 +31,6 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 const redirectToMiseEnPlace = () => {
-  router.push("/mise-en-place");
+  router.push({ name: "mise-en-place" });
 };
 </script>

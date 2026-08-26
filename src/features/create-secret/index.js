@@ -1,1 +1,1 @@
-export { default as CreateSecretForm } from "@/features/create-secret/ui/FormulaireSecret.vue";
+export { default } from "@/features/create-secret/ui/FormulaireSecret.vue";

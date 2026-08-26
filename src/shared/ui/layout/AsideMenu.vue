@@ -1,17 +1,23 @@
 <template>
   <div class="aside-menu">
     <ul>
-      <li>
-        <RouterLink to="/" active-class="active" exact-active-class="active">Accueil</RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/mise-en-place" active-class="active" exact-active-class="active"
-          >Mise en place</RouterLink
-        >
+      <li v-for="menuItem in menuItems" :key="menuItem.name">
+        <RouterLink :to="menuItem.path" active-class="active" exact-active-class="active">{{
+          menuItem.name
+        }}</RouterLink>
       </li>
     </ul>
   </div>
 </template>
+<script setup>
+import { ref } from "vue";
+
+const menuItems = ref([
+  { name: "Accueil", path: "/" },
+  { name: "Mise en place", path: "/mise-en-place" },
+  { name: "Journal des secrets", path: "/journal-secrets" },
+]);
+</script>
 
 <style scoped>
 .aside-menu {
