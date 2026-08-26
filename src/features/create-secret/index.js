@@ -1,0 +1,1 @@
+export { default as CreateSecretForm } from "@/features/create-secret/ui/FormulaireSecret.vue";

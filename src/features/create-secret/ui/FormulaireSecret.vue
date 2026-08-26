@@ -26,10 +26,10 @@
 
 <script setup>
 import { ref, computed, watch } from "vue";
-import { useSecretsStore } from "@/features/secrets";
+import { useCreateSecret } from "@/features/create-secret/model/useCreateSecretStore";
 
 // Store
-const secretsStore = useSecretsStore();
+const secretsStore = useCreateSecret();
 
 // Data
 const nomJoueur = ref("");
@@ -53,7 +53,7 @@ watch(isFauxSecret, (isChecked) => {
 
 // Methodes
 function addSecret() {
-  secretsStore.addSecret({
+  secretsStore.createSecret({
     nomJoueur: isFauxSecret.value ? "" : nomJoueur.value.trim(),
     secret: secret.value.trim(),
     isFauxSecret: isFauxSecret.value,

@@ -14,7 +14,7 @@
   min-height: 50px;
   padding: 24px;
   background-color: #f4f5f6;
-  border-bottom:1px solid  #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
   p {
     font-weight: bold;
     margin: 0;

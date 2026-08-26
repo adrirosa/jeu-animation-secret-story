@@ -14,7 +14,7 @@ Mise en place et suivi pour le jeu d'animation sur le thème de "Secret story"
 npm install
 ```
 
-# Lancer le projet 
+# Lancer le projet
 
 ```bash
 npm run dev

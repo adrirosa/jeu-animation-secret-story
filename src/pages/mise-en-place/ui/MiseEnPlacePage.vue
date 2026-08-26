@@ -5,23 +5,30 @@
     pistes.
   </p>
 
-  <FormulaireSecret />
+  <section>
+    <FormulaireSecret />
+  </section>
 
   <!-- section recap de la saisie + lancement du jeu -->
   <section v-if="secrets.length">
     <h2>Récapitulatif des secrets</h2>
     <ul>
       <li v-for="secret in secrets" :key="secret.id">
-        {{ secret.nomJoueur || "Personne" }} - {{ secret.secret }} - Faux secret: {{ secret.isFauxSecret ? "Oui" : "Non" }}
+        {{ secret.nomJoueur || "Personne" }} - {{ secret.secret }} - Faux secret:
+        {{ secret.isFauxSecret ? "Oui" : "Non" }}
       </li>
     </ul>
+    <button @click="launchGame">Lancer la partie</button>
   </section>
 </template>
 
 <script setup>
-import FormulaireSecret from "@/pages/mise-en-place/ui/FormulaireSecret.vue";
-import { useSecretsStore } from "@/features/secrets";
+import FormulaireSecret from "@/features/create-secret";
+import { useSecretsStore } from "@/entities/secrets";
 
 const secretsStore = useSecretsStore();
 const secrets = secretsStore.secrets;
+const launchGame = () => {
+  secretsStore.launchGame();
+};
 </script>
