@@ -2,21 +2,32 @@
   <div class="aside-menu">
     <ul>
       <li v-for="menuItem in menuItems" :key="menuItem.name">
-        <RouterLink :to="menuItem.path" active-class="active" exact-active-class="active">{{
-          menuItem.name
-        }}</RouterLink>
+        <RouterLink
+          :to="menuItem.path"
+          active-class="active"
+          exact-active-class="active"
+          :class="{ disabled: menuItem.isDisabled }"
+          :aria-disabled="menuItem.isDisabled"
+          :tabindex="menuItem.isDisabled ? -1 : 0"
+          @click="handleLinkClick($event, menuItem)"
+          >{{ menuItem.name }}</RouterLink
+        >
       </li>
     </ul>
   </div>
 </template>
 <script setup>
-import { ref } from "vue";
+import { defineProps } from "vue";
 
-const menuItems = ref([
-  { name: "Accueil", path: "/" },
-  { name: "Mise en place", path: "/mise-en-place" },
-  { name: "Journal des secrets", path: "/journal-secrets" },
-]);
+// Props
+defineProps({ menuItems: { type: Array, required: true } });
+
+// Methods
+function handleLinkClick(event, menuItem) {
+  if (menuItem.isDisabled) {
+    event.preventDefault();
+  }
+}
 </script>
 
 <style scoped>
@@ -31,5 +42,12 @@ const menuItems = ref([
 .active {
   font-weight: 700;
   color: #8f3ac2;
+}
+
+.disabled {
+  pointer-events: none;
+  color: #8c8e93;
+  cursor: not-allowed;
+  text-decoration: none;
 }
 </style>

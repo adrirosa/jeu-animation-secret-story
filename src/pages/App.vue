@@ -7,5 +7,5 @@
 </template>
 
 <script setup>
-import MainLayout from "@/shared/ui/layout/MainLayout.vue";
+import MainLayout from "@/widgets/layouts/MainLayout.vue";
 </script>

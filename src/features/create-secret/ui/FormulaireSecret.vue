@@ -51,7 +51,7 @@ watch(isFauxSecret, (isChecked) => {
   }
 });
 
-// Methodes
+// Methods
 function addSecret() {
   secretsStore.createSecret({
     nomJoueur: isFauxSecret.value ? "" : nomJoueur.value.trim(),

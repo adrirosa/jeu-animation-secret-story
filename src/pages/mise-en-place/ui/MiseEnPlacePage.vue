@@ -36,7 +36,7 @@ const gameStore = useGameStore();
 
 const secrets = secretsStore.secrets;
 
-// Methodes
+// Methods
 const launchGame = () => {
   gameStore.launchGame();
 
