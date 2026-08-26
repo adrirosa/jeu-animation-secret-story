@@ -8,6 +8,15 @@ Mise en place et suivi pour le jeu d'animation sur le thème de "Secret story"
 - npm
 - cloner le projet
 
+# Outils du projet
+
+- Vite
+- Vue.js
+- Pinia
+- Vue Router
+- Milligram CSS
+- Linter et formatter : Eslint, Prettier
+
 # Installation
 
 ```bash
